@@ -1,9 +1,11 @@
-const TestPage = () => {
+import { UserButton } from "@clerk/nextjs";
+
+const RootPage = () => {
     return ( 
         <div>
-            Test Page
+            <UserButton afterSignOutUrl="/"/>
         </div>
      );
 }
  
-export default TestPage;
+export default RootPage;
