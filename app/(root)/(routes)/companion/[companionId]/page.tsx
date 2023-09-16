@@ -1,4 +1,5 @@
 import prismadb from "@/lib/prismadb";
+import { CompanionForm } from "./components/companion-form";
 
 interface CompanionIdPageProps {
     params: {
@@ -20,9 +21,10 @@ const CompanionIdPage = async ({
     const categories = await prismadb.category.findMany()
 
   return (
-        <div>
-            Hello Companion ID!
-        </div>
+        <CompanionForm
+            initialData={companion}
+            categories={categories}
+        />
     );
 };
 
